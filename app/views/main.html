@@ -1,0 +1,15 @@
+<div class="header-logo text-center">
+    <div class="form-group clearfix col-md-4">
+        <button class="btn btn-primary" ng-click="clearLocalStorage()">Clear LocalStorage</button>
+    </div>
+    <div class="col-md-4"><img src="images/logo.jpg" height="100px;" ng-click="showEvents()"></div>
+</div>
+
+<flex-calendar options="calendarOptions" events="events"></flex-calendar>
+
+<div class="modal fade in" ng-class="{ 'block': modal.open == 'addEvent'}" ng-include="'/views/modalCalendar/modalRegisterContent.html'">
+
+</div>
+<div class="modal fade in" ng-class="{ 'block': modal.open == 'registerUser'}" ng-include="'/views/modalCalendar/modalAddUsers.html'">
+
+</div>
